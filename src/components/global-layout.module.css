@@ -1,7 +1,7 @@
 .container {
   background-color: white;
   max-width: 600px;
-  max-height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
 
   box-shadow: rgba(100, 100, 100, 0.2) 0px 0px 29px 0px;
@@ -25,6 +25,6 @@
 }
 
 .footer {
-  padding: 100px 0;
+  padding: 100px 0px;
   color: gray;
 }
