@@ -7,6 +7,7 @@ import {
 } from 'next';
 import fetchBooks from '@/lib/fetch-books';
 
+// SSR 방식
 export const getServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
@@ -21,6 +22,23 @@ export const getServerSideProps = async (
 export default function Page({
   books,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  // SSG 방식
+  // const [books, setBooks] = useState<BookData[]>([]);
+
+  // const router = useRouter();
+  // const q = router.query.q;
+
+  // const fetchSearchResult = async () => {
+  //   const data = await fetchBooks(q as string);
+  //   setBooks(data);
+  // };
+
+  // useEffect(() => {
+  //   if (q) {
+  //     fetchSearchResult();
+  //   }
+  // }, [q]);
+
   return (
     <div>
       {books.map((book) => (
